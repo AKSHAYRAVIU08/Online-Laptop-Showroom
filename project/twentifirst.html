@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="receipt">
+
+    <h1>Fantastic Laptop Showroom</h1>
+    <p>Banarjee Road, Thrissur</p>
+    <p>Phone : 9876543210</p>
+
+    <hr>
+
+    <div class="details">
+        <p><b>Invoice No :</b> INV1001</p>
+        <p><b>Date :</b> <span id="date"></span></p>
+        <p><b>Customer :</b> Akshay Ravi</p>
+        <p><b>Mobile :</b> 9876543210</p>
+    </div>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Laptop</th>
+                <th>Qty</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>DELL</td>
+                <td id="qty">1</td>
+                <td id="price">95000</td>
+                <td id="subtotal"></td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <div class="amount">
+
+        <p>Subtotal : ₹ <span id="sub"></span></p>
+        <p>Discount (10%) : ₹ <span id="discount"></span></p>
+        <p>GST (18%) : ₹ <span id="gst"></span></p>
+
+        <h2>Grand Total : ₹ <span id="grand"></span></h2>
+
+    </div>
+
+    <button onclick="printReceipt()">Print Receipt</button>
+
+</div>
+
+<script src="script.js"></script>
+
+<style>
+    body{
+
+    font-family: Arial;
+    background:#f2f2f2;
+}
+
+.receipt{
+
+    width:700px;
+    margin:30px auto;
+    background:white;
+    padding:20px;
+    box-shadow:0 0 10px gray;
+
+}
+
+h1{
+
+    text-align:center;
+    margin-bottom:5px;
+}
+
+p{
+
+    margin:5px;
+}
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+table th{
+
+    background:#007bff;
+    color:white;
+}
+
+table th, table td{
+
+    border:1px solid gray;
+    padding:10px;
+    text-align:center;
+}
+
+.amount{
+
+    margin-top:20px;
+    text-align:right;
+}
+
+button{
+
+    width:100%;
+    padding:12px;
+    margin-top:20px;
+    background:#28a745;
+    color:white;
+    border:none;
+    cursor:pointer;
+    font-size:18px;
+}
+
+button:hover{
+
+    background:#218838;
+}
+
+@media print{
+
+button{
+
+display:none;
+
+}
+
+body{
+
+background:white;
+
+}
+
+.receipt{
+
+box-shadow:none;
+
+}
+
+}
+</style>
+
+<script>
+    document.getElementById("date").innerHTML =
+new Date().toLocaleDateString();
+
+let qty = Number(document.getElementById("qty").innerHTML);
+
+let price = Number(document.getElementById("price").innerHTML);
+
+let subtotal = qty * price;
+
+document.getElementById("subtotal").innerHTML = subtotal;
+
+document.getElementById("sub").innerHTML = subtotal;
+
+let discount = subtotal * 0.10;
+
+document.getElementById("discount").innerHTML = discount;
+
+let afterDiscount = subtotal - discount;
+
+let gst = afterDiscount * 0.18;
+
+document.getElementById("gst").innerHTML = gst.toFixed(2);
+
+let grand = afterDiscount + gst;
+
+document.getElementById("grand").innerHTML = grand.toFixed(2);
+
+function printReceipt(){
+
+window.print();
+
+}
+</script>
+
+</body>
+</html>

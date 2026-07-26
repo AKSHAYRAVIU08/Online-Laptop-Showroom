@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<body>
+    {% load static %}
+    <nav class="navbar navbar-expand-lg navbar-secondary bg-secondary">
+    
+
+    <a class="navbar-brand" style="font-size: 40px;"><b>LAPTOP SHOWROOM</b></a>
+
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a href="/four" class="text-white" style="font-size: 30px; padding: 10px; text-decoration: none;"><b>Laptops</b></a>
+            </li>
+
+            <li class="nav-item">
+                <a href="/five" class="text-white" style="font-size: 30px; padding: 10px; text-decoration: none;"><b>Admin</b></a>
+            </li>
+
+            <li class="nav-item">
+                <a href="/six" class="text-white" style="font-size: 30px; padding: 10px; text-decoration: none;"><b>Proccessor</b></a>
+            </li>
+
+            <li class="nav-item">
+                <a href="/seven" class="text-white" style="font-size: 30px; padding: 10px; text-decoration: none;"><b>Storage</b></a>
+            </li>
+
+            <li class="nav-item">
+                <a href="/eight" class="text-white" style="font-size: 30px; padding: 10px; text-decoration: none;"><b>Price</b></a>
+            </li>
+
+            <li class="nav-item">
+                <a href="/nine" class="text-white" style="font-size: 30px; padding: 10px; text-decoration: none;"><b>Contact Us</b></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<style>
+.text-white:hover{
+    color: red !important;
+}
+</style>
+
+<style>
+    body {
+        background-image: url('{% static "system.jpg" %}');
+        background-repeat: no-repeat;
+        background-size: 1300px;
+    }
+</style>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

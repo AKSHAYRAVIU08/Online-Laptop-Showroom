@@ -1,0 +1,35 @@
+from django.urls import path
+from .import views
+
+urlpatterns = [
+    path('', views.one),
+    path('two', views.two,name="two"),
+    path('three', views.three,name="three"),
+    path('four', views.four,name="four"),
+    path('five', views.five,name="five"),
+    path('product_list', views.product_list, name='product_list'),
+    path('add_product', views.add_product, name='add_product'),
+    path('edit/<int:pk>/',views.edit_product,name='edit_product'),
+    path('delete/<int:pk>/',views.delete_product,name='delete_product'),
+    path('six', views.six,name="six"),
+    path('seven', views.seven,name="seven"),
+    path('eight', views.eight,name="eight"),
+    path('nine', views.nine,name="nine"),
+    path('ten', views.ten,name="ten"),
+    path('eleven', views.eleven,name="eleven"),
+    path('twovelve', views.twovelve,name="twovelve"),
+    path('payment', views.payment, name="payment"),
+    path('payment-success', views.payment_success, name="payment_success"),
+    path('thirteen', views.thirteen,name="thirteen"),
+    path('fourteen', views.fourteen,name="fourteen"),
+    path('fifteen', views.fifteen,name="fifteen"),
+    path('sixteen', views.sixteen,name="sixteen"),
+    path('seventeen', views.seventeen,name="seventeen"),
+    path('eighteen', views.eighteen,name="eighteen"),
+    path('nineteen', views.nineteen,name="nineteen"),
+    path('twentieth', views.twentieth,name="twentieth"),
+    path('twentifirst', views.twentifirst,name="twentifirst"),
+    path('twentisecond', views.twentisecond,name="twentisecond"),
+    path('twentithird', views.twentithird,name="twentithird"),
+    path('twentifourth', views.twentifourth,name="twentifourth")
+] 
